@@ -1,32 +1,34 @@
 function encrypt() {
-  var inputText = document.getElementById("inputText").value;
-  var outputText = document.getElementById("outputText");
-  var copyButton = document.getElementById("copyButton");
+  let inputText = document.getElementById("inputText").value;
+  let outputText = document.getElementById("outputText");
+  let copyButton = document.getElementById("copyButton");
+  let subTitleOutput = document.getElementById("subTitleOutput")
   
   // Encriptación con Base64
-  var encryptedText = btoa(inputText);
+  let encryptedText = btoa(inputText);
   
   outputText.innerText =   encryptedText;
   
   // Mostrar el botón de copiar después de la encriptación
   copyButton.style.display = "block";
+  subTitleOutput.style.display = "none"
 }
 
 function decrypt() {
-  var inputText = document.getElementById("inputText").value;
-  var outputText = document.getElementById("outputText");
+  let inputText = document.getElementById("inputText").value;
+  let outputText = document.getElementById("outputText");
   
   // Desencriptación con Base64
-  var decryptedText = atob(inputText);
+  let decryptedText = atob(inputText);
   
-  outputText.innerText = "Texto desencriptado: " + decryptedText;
+  outputText.innerText = decryptedText;
 }
 
 function copytext() {
-  var outputText = document.getElementById("outputText").innerText;
+  let outputText = document.getElementById("outputText").innerText;
 
   // Crear un elemento de texto temporal y copiar el contenido
-  var tempTextArea = document.createElement("textarea");
+  let tempTextArea = document.createElement("textarea");
   tempTextArea.value = outputText;
   document.body.appendChild(tempTextArea);
   tempTextArea.select();
@@ -37,6 +39,6 @@ function copytext() {
 }
 
 function toggleDarkMode() {
-  var body = document.body;
+  let body = document.body;
   body.classList.toggle("dark-mode");
 }

@@ -10,33 +10,39 @@
 </head>
 <body>
 
-<header>
-  <button onclick="toggleDarkMode()">🌙</button>
-  <h1>Encriptador</h1>
-</header>
+  <header>
+    <h1>Encriptador</h1>
+    <label class="switch">
+      <input  onclick="toggleDarkMode()" type="checkbox" >
+      <span class="slider round"></span>
+    </label>
+  </header>
 
-<section class="inputSection">
-  <input type="text" class="inputText" id="inputText" placeholder="Ingresa tu texto aqui">
-  <div class="infoIcon">ℹ️
-    <span>Solo letras en minúscula y sin acentos.</span>
-  </div>
-</section>
+    <section class="inputSection">
+      <input type="text" class="inputText" id="inputText" placeholder="Ingresa tu texto aqui">
+      <div class="infoIcon">ℹ️
+        <span>Solo letras en minúscula y sin acentos.</span>
+      </div>
+    </section>
 
-<section class="actionButtons">
-  <button class="bnt-encrypt" onclick="encrypt()">Encriptar</button>
-  <button class="btn-decrypt" onclick="decrypt()">Desencriptar</button>
-</section>
+    <section class="actionButtons">
+      <button class="bnt-encrypt" onclick="encrypt()">Encriptar</button>
+      <button class="btn-decrypt" onclick="decrypt()">Desencriptar</button>
+    </section>
 
-<section class="resultSection">
-  <div class="containerOutputText">
-    <p class="outputText" id="outputText">Ningún mensaje fue encontrado</p>
-    <span>Ingresa el texto que desees encriptar o desencriptar.</span>
-    <button class="copyButton" id="copyButton" onclick="copyText()">Copiar</button>
-  </div>
+    <section class="resultSection">
+      <div class="containerOutputText">
+        <p class="outputText" id="outputText">Ningún mensaje fue encontrado</p>
+        <span id="subTitleOutput">Ingresa el texto que desees encriptar o desencriptar.</span>
+        <button class="copyButton" id="copyButton" onclick="copytext()">Copiar</button>
+      </div>
+    </section>
+    <section  class="footer">
+      <p>&copy; Andres Felipe Morales Cardona </p>
+      <span>2024 </span>
+    </section>
 
-</section>
-
-<script src="./app.js"></script>
+    <script src="./app.js"></script>
 
 </body>
 </html>
