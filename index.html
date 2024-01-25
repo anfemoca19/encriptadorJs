@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+    
+    </style>
+</head>
+<body>
+
+<header>
+  <button onclick="toggleDarkMode()">🌙</button>
+  <h1>Encriptador</h1>
+</header>
+
+<section class="inputSection">
+  <input type="text" class="inputText" id="inputText" placeholder="Ingresa tu texto aqui">
+  <div class="infoIcon">ℹ️
+    <span>Solo letras en minúscula y sin acentos.</span>
+  </div>
+</section>
+
+<section class="actionButtons">
+  <button class="bnt-encrypt" onclick="encrypt()">Encriptar</button>
+  <button class="btn-decrypt" onclick="decrypt()">Desencriptar</button>
+</section>
+
+<section class="resultSection">
+  <div class="containerOutputText">
+    <p class="outputText" id="outputText">Ningún mensaje fue encontrado</p>
+    <span>Ingresa el texto que desees encriptar o desencriptar.</span>
+    <button class="copyButton" id="copyButton" onclick="copyText()">Copiar</button>
+  </div>
+
+</section>
+
+<script src="./app.js"></script>
+
+</body>
+</html>
