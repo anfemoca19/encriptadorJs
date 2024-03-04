@@ -3,6 +3,7 @@ function encrypt() {
   let outputText = document.getElementById("outputText");
   let copyButton = document.getElementById("copyButton");
   let subTitleOutput = document.getElementById("subTitleOutput")
+  let searchIcon = document.getElementById("searchIcon")
   
   // Encriptación con Base64
   let encryptedText = btoa(inputText);
@@ -12,6 +13,7 @@ function encrypt() {
   // Mostrar el botón de copiar después de la encriptación
   copyButton.style.display = "block";
   subTitleOutput.style.display = "none"
+  searchIcon.style.display="none"
 }
 
 function decrypt() {
@@ -39,6 +41,7 @@ function copytext() {
 }
 
 function toggleDarkMode() {
+  document.getElementById("outputText").style.color='#000000';
   let body = document.body;
   body.classList.toggle("dark-mode");
 }
